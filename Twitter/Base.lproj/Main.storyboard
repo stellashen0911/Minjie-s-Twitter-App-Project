@@ -53,7 +53,7 @@
         <!--Home-->
         <scene sceneID="5se-kR-0fL">
             <objects>
-                <tableViewController id="P1E-6h-ra2" sceneMemberID="viewController">
+                <tableViewController id="P1E-6h-ra2" customClass="HomeTableTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="nJn-7h-a3D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,14 @@
                             <outlet property="delegate" destination="P1E-6h-ra2" id="hxK-kv-KcA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Home" id="CAA-YF-sK8"/>
+                    <navigationItem key="navigationItem" title="Home" id="CAA-YF-sK8">
+                        <barButtonItem key="leftBarButtonItem" title="Log out" id="YmQ-RH-Ou6">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logout:" destination="P1E-6h-ra2" id="PNW-Zx-Ulw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQP-at-7yd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -86,9 +93,22 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3At-9W-JrN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.49851602080000001" green="0.65172358740000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.49851602080000001" green="0.65172358740000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.49851602080000001" green="0.65172358740000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.63244220149999997" green="0.75987243739999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" red="0.63244220149999997" green="0.75987243739999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="shadowColor" red="0.63244220149999997" green="0.75987243739999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" red="0.63244220149999997" green="0.75987243739999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="shadowColor" red="0.63244220149999997" green="0.75987243739999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <connections>
                         <segue destination="P1E-6h-ra2" kind="relationship" relationship="rootViewController" id="jQa-HN-Z6p"/>
